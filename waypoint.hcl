@@ -25,6 +25,7 @@ app "example-nodejs-ingress" {
       ingress "http" {
         path_type = "ImplementationSpecific"
         path      = "/"
+        host = "yoyoyo.hack.gt"
       }
     }
   }
