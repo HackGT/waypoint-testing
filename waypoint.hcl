@@ -37,9 +37,9 @@ app "example-nodejs-ingress" {
         }
       }
 
-      ports = {
+      ports = [{
         target_port = "3000"
-      }
+      }]
     }
   }
 }
