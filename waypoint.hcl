@@ -1,13 +1,5 @@
 project = "example-nodejs-ingress"
 
-runner {
-  enabled = true
-
-  data_source "git" {
-    url  = "https://github.com/HackGT/waypoint-testing.git"
-  }
-}
-
 app "example-nodejs-ingress" {
   labels = {
     "service" = "example-nodejs-ingress",
@@ -15,16 +7,10 @@ app "example-nodejs-ingress" {
   }
 
   build {
-    use "docker" {
+    use "docker-pull" {
+      image = "docker.io/hackgt/waypoint-testing"
+      tag   = "latest"
       disable_entrypoint = true
-    }
-
-    registry {
-      use "docker" {
-        image = "gcr.io/hackgt-cluster/example-nodejs-ingress"
-        tag   = "1.0.0"
-        local = false
-      }
     }
   }
 
