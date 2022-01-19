@@ -31,7 +31,7 @@ app "example-nodejs-ingress" {
         path_type = "ImplementationSpecific"
         host = "yoyoyo.hack.gt"
 
-        tls = {
+        tls {
           hosts = ["yoyoyo.hack.gt"]
           secret_name = "prod-tls"
         }
