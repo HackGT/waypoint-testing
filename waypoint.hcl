@@ -25,7 +25,7 @@ app "example-nodejs-ingress" {
       ingress "http" {
         annotations {
           "kubernetes.io/ingress.class" = "nginx"
-          "kubernetes.io/tls-acme": "false"
+          "kubernetes.io/tls-acme" = "false"
         }
 
         path_type = "ImplementationSpecific"
