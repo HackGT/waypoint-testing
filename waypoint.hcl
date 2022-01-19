@@ -35,10 +35,10 @@ app "example-nodejs-ingress" {
           hosts = ["yoyoyo.hack.gt"]
           secret_name = "prod-tls"
         }
+      }
 
-        ports = {
-          target_port = "3000"
-        }
+      ports = {
+        target_port = "3000"
       }
     }
   }
