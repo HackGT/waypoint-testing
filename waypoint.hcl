@@ -29,7 +29,6 @@ app "example-nodejs-ingress" {
         }
 
         path_type = "ImplementationSpecific"
-        path      = "/"
         host = "yoyoyo.hack.gt"
       }
     }
