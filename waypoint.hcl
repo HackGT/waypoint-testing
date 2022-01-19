@@ -22,7 +22,10 @@ app "example-nodejs-ingress" {
 
   release {
     use "kubernetes" {
-      load_balancer = true
+      ingress "http" {
+        path_type = "ImplementationSpecific"
+        path      = "/"
+      }
     }
   }
 }
