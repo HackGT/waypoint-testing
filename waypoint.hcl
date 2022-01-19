@@ -23,7 +23,7 @@ app "example-nodejs-ingress" {
   release {
     use "kubernetes" {
       ingress "http" {
-        annotations {
+        annotations = {
           "kubernetes.io/ingress.class" = "nginx"
           "kubernetes.io/tls-acme" = "false"
         }
