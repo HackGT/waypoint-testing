@@ -23,6 +23,10 @@ app "example-nodejs-ingress" {
   release {
     use "kubernetes" {
       ingress "http" {
+        annotations = {
+          "kubernetes.io/ingress.class" = "nginx"
+        }
+
         path_type = "ImplementationSpecific"
         path      = "/"
         host = "yoyoyo.hack.gt"
